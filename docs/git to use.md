@@ -459,3 +459,28 @@ remote
 
 ⑥ 阅读 Git Hint
 ```
+
+```bash
+Git Push 失败
+
+① git status
+    查看工作区是否干净
+
+② git branch
+    查看当前分支
+
+③ git remote -v
+    查看远程仓库地址
+
+④ ssh -T git@github.com
+    检查 SSH 身份认证
+
+⑤ git log --oneline --graph --decorate --all
+    查看本地与远程提交历史
+
+⑥ 根据 Git Hint 判断：
+    Repository not found → 仓库不存在/remote 错误
+    non-fast-forward → 远程比本地多提交
+    embedded git repository → 仓库嵌套
+```
+
