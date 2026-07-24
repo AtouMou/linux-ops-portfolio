@@ -22,7 +22,7 @@ Thumbs.db
 # Build
 dist/
 build/
-
+task-details/
 # 防止密钥泄漏
 *.pem
 *.key
