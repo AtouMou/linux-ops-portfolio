@@ -1,0 +1,89 @@
+# git常用命令
+
+## 初始化与配置
+
+git init							#初始化
+
+git clone 						#克隆仓库
+
+git config --global user.name "队内工号"
+
+git config --global user.email "随机邮箱"
+
+## 基础操作
+
+git status
+
+git add <file>/.
+
+git commit -m ""					#提交到本地仓库
+
+git push 									#推送到远程仓库
+
+git pull 									#拉取远程仓库
+
+## 查看相关
+
+git log						#提交历史
+
+git log --online 			#简洁模式
+
+git log -n 5				#最近提交的5次
+
+git diff 						#查看差异
+
+## 分支
+
+git branch
+
+git branch <name>				#创建分支
+
+git checkout/switch <branch>				#切换分支
+
+git checkout -b <name>  # 创建并切换
+git merge <branch>      # 合并分支
+git branch -d <branch>  # 删除分支
+
+## 撤销操作
+
+git checkout -- <file>  # 撤销工作目录修改
+git reset HEAD <file>  # 取消暂存
+git reset --hard <id>  # 回退到某个版本
+
+## 远程操作
+
+git remote -v           # 查看远程仓库
+git remote add origin <url>  # 添加远程
+git push -u origin main     # 首次推送
+git push --tags        # 推送 tag
+
+## 常用组合
+
+```bash
+# 首次克隆后提交
+git clone <url>
+cd <repo>
+# 修改文件
+git add .
+git commit -m "first commit"
+git push -u origin main
+
+# 日常开发流程
+git checkout -b feature/xxx
+# 修改代码
+git add .
+git commit -m "feat: xxx"
+git push origin feature/xxx
+# 在 GitHub 创建 PR
+```
+
+## 学习过程中遇到的问题
+
+SSH未配置
+
+错将私钥公开
+
+配置远程仓库时，错误将队
+
+内工号写入用户名
+
